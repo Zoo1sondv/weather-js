@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <link rel="icon" href="./assets/img/iconSON.jpg" type="image/gif" sizes="16x16" />
+        <link
+            href="//db.onlinewebfonts.com/c/1ba82d324736a8a9d4327d482c4627c4?family=Ebrima"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="./assets/img/icon/fontawesome.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/scss/styles.css" />
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="weather">
+            <div class="weather__location">
+                <span class="weather__location__title">the weather</span>
+                <div class="weather__location__current">
+                    <span class="temperature">16</span>
+                    <div class="place">
+                        <span class="place__name">London</span>
+                        <span class="place__time">06:09 - Monday, 9 sep 19</span>
+                    </div>
+                    <div class="icon">
+                        <img
+                            src="http://openweathermap.org/img/wn/10d@2x.png"
+                            alt="weather icon"
+                            class="icon__weather"
+                            width="60"
+                            height="60"
+                        />
+                        <span class="icon__name">Cloudy</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather__detail">
+                <div class="weather__detail__search">
+                    <input
+                        id="search-input"
+                        name="search-input"
+                        type="text"
+                        placeholder="Another location"
+                        class="weather__detail__search__input"
+                    />
+                    <button id="search-btn" class="weather__detail__search__btn" onclick="getData">
+                        <i class="fa-regular fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <div class="weather__detail__location"></div>
+
+                <div class="weather__detail__info">
+                    <span class="weather__detail__info__title">Weather Details</span>
+                    <div>
+                        <div class="weather__detail__info__item eather__detail__info__cloudy">
+                            <span>Cloudy</span>
+                            <span id="cloudy">86%</span>
+                        </div>
+                        <div class="weather__detail__info__item weather__detail__info__humidity">
+                            <span>Humidity</span>
+                            <span id="humidity">62%</span>
+                        </div>
+                        <div class="weather__detail__info__item weather__detail__info__wind">
+                            <span>Wind</span>
+                            <span id="wind">8km/h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
